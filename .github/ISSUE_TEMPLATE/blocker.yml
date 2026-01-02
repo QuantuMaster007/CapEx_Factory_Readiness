@@ -1,0 +1,59 @@
+name: Blocker (Install / Commissioning)
+description: Track a readiness blocker with gate, owner, and mitigation.
+title: "[Blocker] "
+labels: ["Blocker"]
+body:
+  - type: dropdown
+    id: gate
+    attributes:
+      label: Gate impacted
+      options:
+        - Install
+        - PowerOn
+        - Comm
+        - SAT
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Sev-1
+        - Sev-2
+        - Sev-3
+    validations:
+      required: false
+
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      placeholder: "Facilities / Controls / Supplier / EHS / IT"
+    validations:
+      required: false
+
+  - type: textarea
+    id: blocker
+    attributes:
+      label: What is blocked + impact?
+      placeholder: "What is blocked, why it matters, what slips if not cleared."
+    validations:
+      required: false
+
+  - type: textarea
+    id: data_refs
+    attributes:
+      label: Data / Evidence references (optional)
+      placeholder: "e.g., docs/evidence/gate_slip_risk_output.md, readiness_rollup.csv"
+    validations:
+      required: false
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Mitigation / next steps (optional)
+      placeholder: "Immediate action, ETA, escalation path."
+    validations:
+      required: false
