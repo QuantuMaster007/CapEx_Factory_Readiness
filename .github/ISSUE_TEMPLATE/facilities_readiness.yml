@@ -1,0 +1,45 @@
+name: Facilities Readiness Task
+description: Track facilities utilities/readiness items that gate install/bring-up.
+title: "[Facilities] "
+labels: ["Facilities"]
+body:
+  - type: dropdown
+    id: utility
+    attributes:
+      label: Utility / area (optional)
+      options:
+        - Power
+        - CDA
+        - Exhaust
+        - Vacuum
+        - DI Water
+        - Network/VLAN
+        - Rigging/Space
+        - EHS / Interlocks
+        - Other
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope + acceptance criteria (optional)
+      placeholder: "What must be true to call this 'Done'?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies (optional)
+      placeholder: "What must happen first? (layout approval, vendor delivery, etc.)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: owner_eta
+    attributes:
+      label: Owner + ETA (optional)
+      placeholder: "Owner, expected completion date, escalation path."
+    validations:
+      required: false

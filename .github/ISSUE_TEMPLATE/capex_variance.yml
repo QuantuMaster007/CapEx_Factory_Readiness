@@ -1,0 +1,44 @@
+name: CapEx Variance Investigation
+description: Investigate variance and propose corrective action (rebaseline/approve/defer).
+title: "[CapEx] Variance investigation: "
+labels: ["CapEx"]
+body:
+  - type: input
+    id: program
+    attributes:
+      label: Program (optional)
+      placeholder: "Phoenix-ETD"
+    validations:
+      required: false
+
+  - type: input
+    id: category
+    attributes:
+      label: Category (optional)
+      placeholder: "Facilities / Tooling / TestEquipment"
+    validations:
+      required: false
+
+  - type: textarea
+    id: variance_summary
+    attributes:
+      label: Variance summary (optional)
+      placeholder: "Planned vs Actual vs Forecast; where/when variance appears."
+    validations:
+      required: false
+
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Likely drivers (optional)
+      placeholder: "ECO, schedule slip, expedite, scope change, etc."
+    validations:
+      required: false
+
+  - type: textarea
+    id: decision_needed
+    attributes:
+      label: Decision needed / recommendation (optional)
+      placeholder: "Rebaseline? approve spend? defer scope? what’s the call?"
+    validations:
+      required: false
