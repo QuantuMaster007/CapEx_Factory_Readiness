@@ -1,4 +1,4 @@
-# Repo C — CapEx / Factory Readiness Dashboard
+# CapEx / Factory Readiness
 
 A **TPM/EPM-style portfolio repo** demonstrating decision-making using data across **CapEx + readiness + supply chain + facilities**.
 
