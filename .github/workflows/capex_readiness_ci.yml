@@ -1,0 +1,36 @@
+name: capex-readiness-ci
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  validate-and-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate evidence outputs (proof the repo runs)
+        run: |
+          python -m src.tooling.generate_evidence
+
+      - name: Upload evidence outputs (artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: capex_factory_readiness_evidence
+          path: docs/evidence/*.md
