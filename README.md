@@ -5,9 +5,9 @@
 
 A **factory readiness + CapEx governance** portfolio project built in a **TPM/EPM operating style**: readiness gating, critical-path focus, CapEx variance visibility, expedite burn tracking, and automated “evidence pack” outputs you can share with leadership.
 
-**Live demo:** https://quantumaster007.github.io/CapEx_Factory_Readiness/
+**Live Dashboard:** https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/  
 
-**Repo:** https://github.com/QuantumMaster007/CapEx_Factory_Readiness
+**Project Site:** https://quantumaster007.github.io/CapEx_Factory_Readiness/
 
 ---
 
@@ -76,6 +76,7 @@ These are designed to be *leadership-ready snapshots* (portable and reviewable i
 
 **Evidence links (in-repo):**
 
+- [![Dashboard preview](docs/images/dashboard.png)](docs/images/dashboard.pdf)
 - [CapEx variance snapshot](docs/evidence/capex_variance_snapshot.md)
 - [Critical path output](docs/evidence/critical_path_output.md)
 - [Expedite summary output](docs/evidence/expedite_summary_output.md)
