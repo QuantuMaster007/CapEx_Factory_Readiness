@@ -1,6 +1,6 @@
 # CapEx Factory Readiness (TPM/NPO Portfolio)
 
-[![capex-readiness-ci](https://github.com/QuantumMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml/badge.svg)](https://github.com/QuantumMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml)
+[![capex-readiness-ci](https://github.com/QuantuMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml/badge.svg?branch=main)](https://github.com/QuantuMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success)
 
 A **factory readiness + CapEx governance** portfolio project built in a **TPM/EPM operating style**: readiness gating, critical-path focus, CapEx variance visibility, expedite burn tracking, and automated “evidence pack” outputs you can share with leadership.
@@ -207,12 +207,14 @@ app.py                       # Streamlit dashboard
 ---
 
 ## Notes
-- Data is **synthetic/anonymized** for portfolio use.
+Data is **synthetic/anonymized** for portfolio use.
 
 ---
 
 ## LICENSE
+
 PERSONAL USE LICENSE (NON-COMMERCIAL)
+
 Copyright (c) 2026 Sourabh Tarodekar (GitHub: QuantumMaster007)
 
 ---
