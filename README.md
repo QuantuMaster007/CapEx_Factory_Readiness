@@ -6,6 +6,7 @@
 A **factory readiness + CapEx governance** portfolio project built in a **TPM/EPM operating style**: readiness gating, critical-path focus, CapEx variance visibility, expedite burn tracking, and automated “evidence pack” outputs you can share with leadership.
 
 **Live demo:** https://quantumaster007.github.io/CapEx_Factory_Readiness/
+
 **Repo:** https://github.com/QuantumMaster007/CapEx_Factory_Readiness
 
 ---
