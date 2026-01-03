@@ -33,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: capex_factory_readiness_evidence
-          path: docs/evidence/*.md
+          path: docs/evidence/**
