@@ -1,4 +1,4 @@
-# CapEx Factory Readiness (TPM/EPM Portfolio)
+# CapEx Factory Readiness (TPM/NPO Portfolio)
 
 [![capex-readiness-ci](https://github.com/QuantumMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml/badge.svg)](https://github.com/QuantumMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success)
