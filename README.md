@@ -117,8 +117,7 @@ python -m src.tooling.generate_evidence
 
 ## CI / Automation
 ### GitHub Actions — “capex-readiness-ci”
-- Workflow file:
-- [.github/workflows/capex_readiness_ci.yml](.github/workflows/capex_readiness_ci.yml)
+- Workflow file: [.github/workflows/capex_readiness_ci.yml](.github/workflows/capex_readiness_ci.yml)
 - View CI runs: https://github.com/QuantumMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml
 
 
