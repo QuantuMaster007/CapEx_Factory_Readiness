@@ -76,7 +76,7 @@ These are designed to be *leadership-ready snapshots* (portable and reviewable i
 
 **Evidence links (in-repo):**
 
-- [![Dashboard preview](docs/images/dashboard.png)](docs/images/dashboard.pdf)
+- [[Dashboard preview](docs/images/dashboard.png)](docs/images/dashboard.pdf)
 - [CapEx variance snapshot](docs/evidence/capex_variance_snapshot.md)
 - [Critical path output](docs/evidence/critical_path_output.md)
 - [Expedite summary output](docs/evidence/expedite_summary_output.md)
