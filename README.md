@@ -5,7 +5,7 @@
 
 A **factory readiness + CapEx governance** portfolio project built in a **TPM/EPM operating style**: readiness gating, critical-path focus, CapEx variance visibility, expedite burn tracking, and automated “evidence pack” outputs you can share with leadership.
 
-**Live demo:** https://quantumaster007.github.io/CapEx_Factory_Readiness/  
+**Live demo:** https://quantumaster007.github.io/CapEx_Factory_Readiness/
 **Repo:** https://github.com/QuantumMaster007/CapEx_Factory_Readiness
 
 ---
@@ -74,11 +74,12 @@ and written to:
 These are designed to be *leadership-ready snapshots* (portable and reviewable in PRs / artifacts).
 
 **Evidence links (in-repo):**
-- CapEx variance snapshot: `docs/evidence/capex_variance_snapshot.md`
-- Critical path output: `docs/evidence/critical_path_output.md`
-- Expedite summary output: `docs/evidence/expedite_summary_output.md`
-- Gate slip risk output: `docs/evidence/gate_slip_risk_output.md`
-- Readiness score output: `docs/evidence/readiness_score_output.md`
+
+- [CapEx variance snapshot](docs/evidence/capex_variance_snapshot.md)
+- [Critical path output](docs/evidence/critical_path_output.md)
+- [Expedite summary output](docs/evidence/expedite_summary_output.md)
+- [Gate slip risk output](docs/evidence/gate_slip_risk_output.md)
+- [Readiness score output](docs/evidence/readiness_score_output.md)
 
 ---
 
@@ -113,10 +114,12 @@ python -m src.tooling.generate_evidence
 
 ---
 
-## CI / Automation (what a reviewer should look at)
+## CI / Automation
 ### GitHub Actions — “capex-readiness-ci”
-Workflow file:
-- `.github/workflows/capex_readiness_ci.yml`
+- Workflow file:
+- [.github/workflows/capex_readiness_ci.yml](.github/workflows/capex_readiness_ci.yml)
+- View CI runs: https://github.com/QuantumMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml
+
 
 What it does:
 - installs dependencies
@@ -138,10 +141,10 @@ Raw inputs live in `data/raw/`:
 Processed rollups live in `data/processed/` (used by the app for speed).
 
 Full data dictionary:
-- `docs/data_dictionary/README.md`
-- `docs/data_dictionary/capex_plan_vs_actuals.md`
-- `docs/data_dictionary/facility_readiness_tasks.md`
-- `docs/data_dictionary/lead_times_expedite.md`
+- [Data dictionary overview](docs/data_dictionary/README.md)
+- [CapEx plan vs actuals](docs/data_dictionary/capex_plan_vs_actuals.md)
+- [Facility readiness tasks](docs/data_dictionary/facility_readiness_tasks.md)
+- [Lead times + expedite](docs/data_dictionary/lead_times_expedite.md)
 
 ---
 
@@ -149,14 +152,16 @@ Full data dictionary:
 This repo also includes **program ops templates and samples** to show how execution is run:
 
 ### Templates
-- Decision log template: `docs/templates/DECISION_LOG_TEMPLATE.md`
-- RAID log template: `docs/templates/RAID_LOG_TEMPLATE.md`
-- Weekly exec update template: `docs/templates/WEEKLY_EXEC_UPDATE_TEMPLATE.md`
+
+- [Decision log template](docs/templates/DECISION_LOG_TEMPLATE.md)
+- [RAID log template](docs/templates/RAID_LOG_TEMPLATE.md)
+- [Weekly exec update template](docs/templates/WEEKLY_EXEC_UPDATE_TEMPLATE.md)
 
 ### Samples
-- RAID log sample: `docs/samples/RAID_LOG_SAMPLE.md`
-- Decision log sample: `docs/samples/DECISION_LOG_SAMPLE.md`
-- Weekly exec update sample: `docs/samples/WEEKLY_EXEC_UPDATE_2026-01-02.md`
+
+- [RAID log sample](docs/samples/RAID_LOG_SAMPLE.md)
+- [Decision log sample](docs/samples/DECISION_LOG_SAMPLE.md)
+- [Weekly exec update sample](docs/samples/WEEKLY_EXEC_UPDATE_2026-01-02.md)
 
 ### System view
 - `docs/diagrams/system_view.md`
@@ -203,8 +208,12 @@ app.py                       # Streamlit dashboard
 
 ## Notes
 - Data is **synthetic/anonymized** for portfolio use.
-- No license is currently included. If you plan to share/reuse broadly, add a `LICENSE` file.
 
 ---
-If you use this repo in interviews, point reviewers to:
-1) **Live demo**, 2) **CI workflow**, 3) **Evidence pack outputs**, and 4) **Templates + Samples** (shows “how you run programs,” not just code).
+
+## LICENSE
+PERSONAL USE LICENSE (NON-COMMERCIAL)
+Copyright (c) 2026 Sourabh Tarodekar (GitHub: QuantumMaster007)
+
+---
+
