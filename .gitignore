@@ -1,4 +1,9 @@
-.venv/
+# Python cache
 __pycache__/
-*.pyc
-.DS_Store
+*.py[cod]
+*$py.class
+
+# Virtualenv (optional but recommended)
+.venv/
+venv/
+ENV/
