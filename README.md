@@ -12,13 +12,13 @@ A **factory readiness + CapEx governance** portfolio project: readiness gating, 
 
 ## Interview reviewer quickstart (what to click)
 1) **Live demo (Streamlit):** https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/  
-2) **CI workflow:** `.github/workflows/capex_readiness_ci.yml` (green = reproducible outputs)  
-3) **Evidence pack outputs:** `docs/evidence/` (auto-generated markdown insights)  
-4) **Templates + samples:** `docs/templates/` + `docs/samples/` (shows how I run programs)
+2) **CI workflow:** `.github/workflows/capex_readiness_ci.yml`   
+3) **Evidence pack outputs:** `docs/evidence/`   
+4) **Templates + samples:** `docs/templates/` + `docs/samples/` 
 
 ---
 
-## Dashboard preview
+## Dashboard Preview
 [![Dashboard preview](docs/images/dashboard.png)](https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/)
 
 (Backup file for high-res viewing: [`docs/images/dashboard.pdf`](docs/images/dashboard.pdf))
