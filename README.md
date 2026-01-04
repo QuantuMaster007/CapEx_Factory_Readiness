@@ -19,9 +19,9 @@ A **factory readiness + CapEx governance** portfolio project: readiness gating, 
 ---
 
 ## Dashboard Preview
-```
+
 [![Dashboard preview](docs/images/dashboard.png)](https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/)
-```
+
 (Backup file for high-res viewing: [`docs/images/dashboard.pdf`](docs/images/dashboard.pdf))
 
 ---
