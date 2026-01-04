@@ -3,6 +3,7 @@
 [![capex-readiness-ci](https://github.com/QuantuMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml/badge.svg?branch=main)](https://github.com/QuantuMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success)](https://quantumaster007.github.io/CapEx_Factory_Readiness/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Live-FF4B4B?logo=streamlit&logoColor=white)](https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Live-brightgreen?logo=streamlit&logoColor=white)](https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/)
 
 A **factory readiness + CapEx governance** portfolio project: readiness gating, critical-path visibility, CapEx variance tracking, expedite burn analysis, and automated **leadership-ready evidence packs** generated in CI.
 
