@@ -10,7 +10,7 @@ A **factory readiness + CapEx governance** portfolio project: readiness gating, 
 
 ---
 
-## Interview reviewer quickstart (what to click)
+## Interview reviewer quickstart
 1) **Live demo (Streamlit):** https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/  
 2) **CI workflow:** `.github/workflows/capex_readiness_ci.yml`   
 3) **Evidence pack outputs:** `docs/evidence/`   
