@@ -47,9 +47,9 @@ This repo is intentionally designed to show **execution discipline + decision-ma
 
 ## Key results (from the included synthetic dataset)
 ### Dataset scale
-- CapEx plan vs actuals: **3,600 rows** (program × tool × category × month)
-- Facility readiness tasks: **900 tasks** (dependencies + gates + risk)
-- Lead-time / expedite lines: **4,200 rows** (need-by vs promise vs received + expedite spend)
+- CapEx plan vs actuals: (program × tool × category × month)
+- Facility readiness tasks: (dependencies + gates + risk)
+- Lead-time / expedite lines:  (need-by vs promise vs received + expedite spend)
 - Coverage: **5 programs**, **50 tools**, **6 categories**, **6 vendors**, **24 months**
 
 ### Example insights you can demo (synthetic)
@@ -89,7 +89,9 @@ Outputs:
 
 ## How to run locally
 ### Prereqs
+```
 - Python **3.11+**
+```
 
 ### Setup
 ```bash
@@ -140,7 +142,7 @@ Data dictionary:
 
 ---
 
-## Program management artifacts (TPM-style)
+## Program management artifacts 
 ### Templates
 - `docs/templates/DECISION_LOG_TEMPLATE.md`
 - `docs/templates/RAID_LOG_TEMPLATE.md`
