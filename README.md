@@ -1,93 +1,95 @@
-# CapEx Factory Readiness (TPM/NPO Portfolio)
+# CapEx Factory Readiness Command Center (NPI TPM / OPM Portfolio)
 
 [![capex-readiness-ci](https://github.com/QuantuMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml/badge.svg?branch=main)](https://github.com/QuantuMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml)
-![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success)](https://quantumaster007.github.io/CapEx_Factory_Readiness/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Live-FF4B4B?logo=streamlit&logoColor=white)](https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/)
 
-A **factory readiness + CapEx governance** portfolio project built in a **TPM/EPM operating style**: readiness gating, critical-path focus, CapEx variance visibility, expedite burn tracking, and automated “evidence pack” outputs you can share with leadership.
+A **factory readiness + CapEx governance** portfolio project: readiness gating, critical-path visibility, CapEx variance tracking, expedite burn analysis, and automated **leadership-ready evidence packs** generated in CI.
 
-**Live Dashboard:** https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/  
+> **All data is synthetic/anonymized**.
 
-**Project Site:** https://quantumaster007.github.io/CapEx_Factory_Readiness/
+---
+
+## Interview reviewer quickstart (what to click)
+1) **Live demo (Streamlit):** https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/  
+2) **CI workflow:** `.github/workflows/capex_readiness_ci.yml` (green = reproducible outputs)  
+3) **Evidence pack outputs:** `docs/evidence/` (auto-generated markdown insights)  
+4) **Templates + samples:** `docs/templates/` + `docs/samples/` (shows how I run programs)
+
+---
+
+## Dashboard preview
+[![Dashboard preview](docs/images/dashboard.png)](https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/)
+
+(Backup file for high-res viewing: [`docs/images/dashboard.pdf`](docs/images/dashboard.pdf))
 
 ---
 
 ## Why this exists (what it demonstrates)
-This repo is intentionally designed to show **program execution discipline** and **decision-making** across **CapEx + facilities readiness + supply chain**:
+This repo is intentionally designed to show **execution discipline + decision-making** across **CapEx + facilities readiness + supply chain**:
 
 - Clear “what’s blocking install/power-on?” visibility
 - Early identification of gate slip risk (open/blocked/high-risk work)
-- CapEx variance and forecast drift surfaced by program / category / month
-- Expedite trends by vendor and month (where the burn is coming from)
-- Automated evidence outputs generated in CI (reproducible, reviewable)
-
-> **Note:** All datasets are **synthetic/anonymized** for portfolio use.
+- CapEx variance + forecast drift surfaced by program / category / month
+- Expedite burn tracking by vendor and driver
+- Repeatable “evidence pack” outputs you can share with leadership
 
 ---
 
 ## What questions the dashboard answers
-- **What’s on the critical path right now (per tool/program)?**
-- **What’s blocking installation / power-on / SAT / commissioning?**
-- **Where are we burning expedite and which vendors drive it?**
-- **Which gates are most likely to slip and why?**
-- **Where is CapEx trending vs plan/forecast (and what’s driving variance)?**
+- What’s on the **critical path** right now (per program/tool)?
+- What’s **blocking** install → power-on → commissioning → SAT?
+- Where are we burning **expedite**, and which vendors drive it?
+- Which gates are most likely to **slip**, and why?
+- Where is CapEx trending vs plan/forecast (what’s driving variance)?
 
 ---
 
 ## Key results (from the included synthetic dataset)
-These metrics are computed from the repo’s included data (so reviewers can reproduce them):
-
 ### Dataset scale
-- **CapEx plan vs actuals:** **3,600 rows** (program × tool × category × month)
-- **Facility readiness tasks:** **900 tasks** (dependencies + gates + risk flags)
-- **Lead-time / expedite lines:** **4,200 rows** (need-by vs promise vs received + expedite spend)
-- Coverage: **5 programs**, **50 tools**, **6 CapEx categories**, **6 vendors**, **24 months**
+- CapEx plan vs actuals: **3,600 rows** (program × tool × category × month)
+- Facility readiness tasks: **900 tasks** (dependencies + gates + risk)
+- Lead-time / expedite lines: **4,200 rows** (need-by vs promise vs received + expedite spend)
+- Coverage: **5 programs**, **50 tools**, **6 categories**, **6 vendors**, **24 months**
 
 ### Example insights you can demo (synthetic)
-- Total **planned CapEx:** **$561.8M** vs **actual:** **$569.3M** → **+$7.5M variance**
-- Total **expedite spend:** **$7.6M** across **1,434 expedited lines**
-- Readiness rollup shows a **wide spread** of tool readiness (**~57.5% → ~87.0%**) with multiple **R/A** flags for at-risk tools
-- Largest CapEx overrun (by program) in the sample data:
-  - Helios-NewBay (**+$1.79M**), Nova-Upgrade (**+$1.57M**), Orion-Ramp (**+$1.55M**)
-- Highest expedite vendors in the sample data:
-  - VendorF (**$1.38M**), VendorA (**$1.36M**), VendorD (**$1.26M**)
+- Planned CapEx: **$561.8M** vs Actual: **$569.3M** → **+$7.5M variance**
+- Expedite spend: **$7.6M** across **1,434 expedited lines**
+- Readiness spread: **~57.5% → ~87.0%** across tools with multiple **R/A** flags
+
+> These numbers are computed from the synthetic CSVs checked into `data/raw/`.
 
 ---
 
 ## What’s included
 ### 1) Streamlit dashboard
-- **Entry point:** `app.py`
-- Reads from `data/raw` and summarizes results for fast UI load
+- Entry point: `app.py`
+- Reads from: `data/raw/` (synthetic CSVs)
 
 ### 2) Analytics modules (reusable program logic)
-- `src/analytics/readiness.py` — readiness rollups, RAG, gating risk
-- `src/analytics/critical_path.py` — dependency-aware critical-path view per tool/program
-- `src/analytics/expedite.py` — expedite trend & vendor burn summaries
+- `src/analytics/readiness.py` — readiness rollups + RAG
+- `src/analytics/critical_path.py` — dependency-aware critical path per tool/program
+- `src/analytics/expedite.py` — vendor burn summaries
 
 ### 3) Evidence pack (auto-generated + CI artifact)
-Evidence outputs are generated by:
+Generated by:
+- `python -m src.tooling.generate_evidence`
 
-- `src/tooling/generate_evidence.py`
-
-and written to:
-
+Written to:
 - `docs/evidence/`
 
-These are designed to be *leadership-ready snapshots* (portable and reviewable in PRs / artifacts).
-
-**Evidence links (in-repo):**
-
-- [[Dashboard preview](docs/images/dashboard.png)](docs/images/dashboard.pdf)
-- [CapEx variance snapshot](docs/evidence/capex_variance_snapshot.md)
-- [Critical path output](docs/evidence/critical_path_output.md)
-- [Expedite summary output](docs/evidence/expedite_summary_output.md)
-- [Gate slip risk output](docs/evidence/gate_slip_risk_output.md)
-- [Readiness score output](docs/evidence/readiness_score_output.md)
+Outputs:
+- `docs/evidence/readiness_score_output.md`
+- `docs/evidence/critical_path_output.md`
+- `docs/evidence/expedite_summary_output.md`
+- `docs/evidence/capex_variance_snapshot.md`
+- `docs/evidence/gate_slip_risk_output.md`
 
 ---
 
 ## How to run locally
 ### Prereqs
-- Python 3.11+ recommended
+- Python **3.11+**
 
 ### Setup
 ```bash
@@ -99,10 +101,6 @@ python -m venv .venv
 
 pip install -r requirements.txt
 ```
-
-> CI note: evidence generation uses `pandas.to_markdown()`, which requires `tabulate`.
-> Ensure your `requirements.txt` includes:
-> `tabulate>=0.9`
 
 ### Run the dashboard
 ```bash
@@ -118,51 +116,40 @@ python -m src.tooling.generate_evidence
 
 ## CI / Automation
 ### GitHub Actions — “capex-readiness-ci”
-- Workflow file: [.github/workflows/capex_readiness_ci.yml](.github/workflows/capex_readiness_ci.yml)
-- View CI runs: https://github.com/QuantumMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml
-
+Workflow file:
+- `.github/workflows/capex_readiness_ci.yml`
 
 What it does:
-- installs dependencies
-- runs `python -m src.tooling.generate_evidence`
-- uploads `docs/evidence/` as a CI **artifact** (shareable evidence pack)
+- Installs dependencies
+- Runs `python -m src.tooling.generate_evidence`
+- Uploads `docs/evidence/**` as a CI artifact
 
 ---
 
 ## Data model (synthetic)
-Raw inputs live in `data/raw/`:
+Raw inputs:
+- `data/raw/capex_plan_vs_actuals.csv`
+- `data/raw/facility_readiness_tasks.csv`
+- `data/raw/lead_times_expedite.csv`
 
-- `capex_plan_vs_actuals.csv`  
-  Planned vs actual vs forecast spend, per program/tool/category/month + milestone dates/status
-- `facility_readiness_tasks.csv`  
-  Readiness tasks with dependencies (`depends_on`), gates, risk level, owners, and status
-- `lead_times_expedite.csv`  
-  Lead-time planned vs actual, need-by vs promise vs received, and expedite spend/reason
+Optional rollups (if you add them later):
+- `data/processed/`
 
-Processed rollups live in `data/processed/` (used by the app for speed).
-
-Full data dictionary:
-- [Data dictionary overview](docs/data_dictionary/README.md)
-- [CapEx plan vs actuals](docs/data_dictionary/capex_plan_vs_actuals.md)
-- [Facility readiness tasks](docs/data_dictionary/facility_readiness_tasks.md)
-- [Lead times + expedite](docs/data_dictionary/lead_times_expedite.md)
+Data dictionary:
+- `docs/data_dictionary/`
 
 ---
 
 ## Program management artifacts (TPM-style)
-This repo also includes **program ops templates and samples** to show how execution is run:
-
 ### Templates
-
-- [Decision log template](docs/templates/DECISION_LOG_TEMPLATE.md)
-- [RAID log template](docs/templates/RAID_LOG_TEMPLATE.md)
-- [Weekly exec update template](docs/templates/WEEKLY_EXEC_UPDATE_TEMPLATE.md)
+- `docs/templates/DECISION_LOG_TEMPLATE.md`
+- `docs/templates/RAID_LOG_TEMPLATE.md`
+- `docs/templates/WEEKLY_EXEC_UPDATE_TEMPLATE.md`
 
 ### Samples
-
-- [RAID log sample](docs/samples/RAID_LOG_SAMPLE.md)
-- [Decision log sample](docs/samples/DECISION_LOG_SAMPLE.md)
-- [Weekly exec update sample](docs/samples/WEEKLY_EXEC_UPDATE_2026-01-02.md)
+- `docs/samples/DECISION_LOG_SAMPLE.md`
+- `docs/samples/RAID_LOG_SAMPLE.md`
+- `docs/samples/WEEKLY_EXEC_UPDATE_2026-01-02.md`
 
 ### System view
 - `docs/diagrams/system_view.md`
@@ -173,11 +160,12 @@ This repo also includes **program ops templates and samples** to show how execut
 ```text
 data/
   raw/                       # synthetic/anonymized source data
-  processed/                 # rollups used by the dashboard
+  processed/                 # rollups used by charts (optional)
 docs/
   data_dictionary/           # column-level documentation
   diagrams/                  # system views
   evidence/                  # auto-generated evidence outputs
+  images/                    # screenshots / preview PDF
   samples/                   # example program artifacts
   templates/                 # reusable program templates
 src/
@@ -185,38 +173,25 @@ src/
   tooling/                   # scripts to generate evidence
   utils/                     # IO helpers
 app.py                       # Streamlit dashboard
-.github/                     # CI + issue templates
+.github/                     # CI workflow
 ```
 
 ---
 
 ## How to adapt this to real work (safely)
-- Keep this repo as-is for a **portfolio demo**
-- Replace the synthetic CSVs with **sanitized exports** (no customer names, no proprietary part numbers)
-- Update the data dictionary in `docs/data_dictionary/` to match your fields
-- Extend readiness gating rules (e.g., power, network, exhaust, safety approvals) in `src/analytics/readiness.py`
+- Keep the logic, **swap the data** (never publish proprietary CapEx, vendor, or facility data)
+- Replace identifiers with anonymized keys (Program A/B/C, Vendor 1/2/3)
+- Prefer aggregated metrics over raw transactional exports
 
 ---
 
 ## Roadmap (optional next upgrades)
-- Add unit tests for analytics modules (`pytest`)
-- Add schema validation (pydantic / pandera) for input data
-- Add “scenario toggles” in the Streamlit app (site, program, gate, vendor filters)
-- Add richer critical-path visualization (network graph)
-- Add pre-commit hooks (formatting + lint + type checking)
+- Add scenario planning (forecast vs commit vs stretch)
+- Add “gate readiness” go/no-go criteria checks per milestone
+- Add a KPI page: OTD, lead time percentiles, expedite rate, variance aging
+- Add tests for schema validation on input CSVs
 
 ---
 
-## Notes
-Data is **synthetic/anonymized** for portfolio use.
-
----
-
-## LICENSE
-
-PERSONAL USE LICENSE (NON-COMMERCIAL)
-
-Copyright (c) 2026 Sourabh Tarodekar (GitHub: QuantumMaster007)
-
----
-
+## License
+See `LICENSE`.
