@@ -19,8 +19,9 @@ A **factory readiness + CapEx governance** portfolio project: readiness gating, 
 ---
 
 ## Dashboard Preview
+```
 [![Dashboard preview](docs/images/dashboard.png)](https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/)
-
+```
 (Backup file for high-res viewing: [`docs/images/dashboard.pdf`](docs/images/dashboard.pdf))
 
 ---
@@ -162,17 +163,17 @@ Data dictionary:
 ```text
 data/
   raw/                       # synthetic/anonymized source data
-  processed/                 # rollups used by charts (optional)
+  processed/                 # rollups used by charts 
 docs/
   data_dictionary/           # column-level documentation
   diagrams/                  # system views
-  evidence/                  # auto-generated evidence outputs
+  evidence/                  # outputs
   images/                    # screenshots / preview PDF
-  samples/                   # example program artifacts
-  templates/                 # reusable program templates
+  samples/                   # program artifacts
+  templates/                 # program templates
 src/
   analytics/                 # readiness, critical path, expedite summaries
-  tooling/                   # scripts to generate evidence
+  tooling/                   # evidence scripts
   utils/                     # IO helpers
 app.py                       # Streamlit dashboard
 .github/                     # CI workflow
