@@ -56,7 +56,7 @@ These metrics are computed from the repo’s included data (so reviewers can rep
 ## What’s included
 ### 1) Streamlit dashboard
 - **Entry point:** `app.py`
-- Reads from `data/processed/` and summarizes results for fast UI load
+- Reads from `data/raw` and summarizes results for fast UI load
 
 ### 2) Analytics modules (reusable program logic)
 - `src/analytics/readiness.py` — readiness rollups, RAG, gating risk
