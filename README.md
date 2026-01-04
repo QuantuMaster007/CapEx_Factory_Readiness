@@ -29,7 +29,7 @@ A **factory readiness + CapEx governance** portfolio project: readiness gating, 
 ---
 
 ## Why this exists (what it demonstrates)
-This repo is intentionally designed to show **execution discipline + decision-making** across **CapEx + facilities readiness + supply chain**:
+This portfolio project demonstrates how I run complex, cross-functional programs where **execution discipline + decision-making** across **CapEx + facilities readiness + supply chain execution** intersect. It translates fragmented operational data into a clear operating view—readiness status, critical path, variance drivers, and expedite risk—so teams can make faster, higher-quality decisions and leadership has consistent visibility.:
 
 - Clear “what’s blocking install/power-on?” visibility
 - Early identification of gate slip risk (open/blocked/high-risk work)
