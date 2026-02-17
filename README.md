@@ -13,9 +13,7 @@
 
 ---
 
-## 🎯 For Interviewers & Hiring Managers
-
-| What to Review | Why It Matters | Link |
+| Category | Why It Matters | Link |
 |:---|:---|:---|
 | **Live Dashboard** | See how I visualize complex program data for leadership decision-making | [Streamlit App](https://capexfactoryreadiness-3t3ngaxnz2fvjf8jqsxkvg.streamlit.app/) |
 | **CI/CD Pipeline** | Evidence of production-grade automation mindset | [GitHub Actions](.github/workflows/capex_readiness_ci.yml) |
