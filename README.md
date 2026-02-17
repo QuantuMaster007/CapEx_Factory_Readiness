@@ -1,6 +1,6 @@
 
 
-```markdown
+
 # CapEx Factory Readiness Command Center — Reducing Tool Install Delays Through Predictive Readiness Tracking
 
 [![capex-readiness-ci](https://github.com/QuantuMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml/badge.svg?branch=main)](https://github.com/QuantuMaster007/CapEx_Factory_Readiness/actions/workflows/capex_readiness_ci.yml)
